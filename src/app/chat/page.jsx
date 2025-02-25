@@ -23,10 +23,10 @@ export default function Chat() {
             <div
               className={`px-4 py-2 rounded-2xl w-fit max-w-[55%] break-words whitespace-pre-wrap ${m.role === "user"
                 ? "bg-[#1d1f1d] text-right"
-                : "bg-[#2a2d2a] text-left ml-52 mt-8 mb-6"
+                : "bg-[#1d1f1d] text-left ml-52 mt-8 mb-6"
                 }`}
             >
-              <span className="block font-medium text-gray-400 text-left">
+              <span className="block font-medium text-red-700 text-left">
                 {m.role === "user" ? "You" : "AI"}
               </span>
               <span className="block text-white">{m.content}</span>
