@@ -79,6 +79,6 @@ DocumentChunkSchema.statics.findSimilar = async function(queryEmbedding, limit =
   ]);
 };
 
-const DocumentChunk = mongoose.model('DocumentChunk', DocumentChunkSchema);
+// const DocumentChunk = mongoose.model('DocumentChunk', DocumentChunkSchema);
 
-module.exports = DocumentChunk;
+module.exports = mongoose.models.DocumentChunk ||  mongoose.model('DocumentChunk', DocumentChunkSchema);

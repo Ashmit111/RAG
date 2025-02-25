@@ -17,7 +17,7 @@ const connect = async () => {
 
   try {
     mongoose.connect(MONGODB_URI, {
-      dbName: "rainpoint",
+      dbName: "embed",
       bufferCommands: true,
     });
     console.log("Connected");
