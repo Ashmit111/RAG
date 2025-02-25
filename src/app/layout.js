@@ -1,6 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { neobrutalism  } from '@clerk/themes'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: neobrutalism ,
+      }}
+    >
+
       <html suppressHydrationWarning lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
         <body className="bg-black text-white">{children}</body>
       </html>
