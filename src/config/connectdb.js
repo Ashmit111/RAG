@@ -23,10 +23,8 @@ const connect = async () => {
     await mongoose.connect(MONGODB_URI, {
       dbName: "embed",
       bufferCommands: true,
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      serverSelectionTimeoutMS: 30000, // Wait 30s before giving up
-      socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
+      serverSelectionTimeoutMS: 30000, // Increase timeout to avoid errors
+      socketTimeoutMS: 45000, // Increase socket timeout
     });
 
     console.log("✅ Successfully connected to MongoDB");
