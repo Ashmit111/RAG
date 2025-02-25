@@ -1,16 +1,12 @@
 "use client";
 import { useChat } from "@ai-sdk/react";
 import { FiSend } from "react-icons/fi";
-import { UserButton } from "@clerk/nextjs";
 
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat();
 
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
-      <div className="flex justify-end pt-6 pr-10">
-        <UserButton />
-      </div>
       {/* Chat Messages */}
       <div className="flex-1 overflow-y-auto p-4 space-y-3 flex flex-col mr-56">
   {messages.map((m) => (
