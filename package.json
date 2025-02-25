@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/google": "^1.1.17",
+    "@ai-sdk/react": "^1.1.18",
+    "ai": "^4.1.46",
     "axios": "^1.7.9",
     "framer-motion": "^12.4.7",
     "lucide-react": "^0.475.0",
+    "mongoose": "^8.10.1",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -19,6 +23,8 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/node": "22.13.5",
+    "@types/react": "19.0.10",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "postcss": "^8",
