@@ -1,16 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FileText, Zap, ShieldCheck } from "lucide-react";
 import {
   SignedIn,
   SignedOut,
   UserButton,
-  SignIn
+  SignIn,
+  useAuth 
 } from "@clerk/nextjs";
+import { useRouter } from "next/navigation";
 
 const HeroSection = () => {
   const [showSignIn, setShowSignIn] = useState(false);
+  const { isSignedIn } = useAuth();
+  const router = useRouter();
+
+  // Redirect to /chat if signed in
+  useEffect(() => {
+    if (isSignedIn) {
+      router.push("/chat");
+    }
+  }, [isSignedIn, router]);
 
   return (
     <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-4 text-center relative font-mono">
@@ -25,8 +36,9 @@ const HeroSection = () => {
               Log in
             </button>
           </SignedOut>
-          <SignedIn>
-            <UserButton afterSignOutUrl="/" />
+          <SignedIn >
+            <UserButton />
+
           </SignedIn>
         </div>
       </nav>
@@ -55,8 +67,8 @@ const HeroSection = () => {
               Start Chatting
             </button>
           </SignedOut>
-          <SignedIn>
-            <UserButton afterSignOutUrl="/" />
+          <SignedIn >
+            <UserButton />
           </SignedIn>
         </div>
       </div>
