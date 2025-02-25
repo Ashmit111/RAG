@@ -37,19 +37,14 @@ export async function POST(request) {
     const topChunks = chunksWithSimilarity.slice(0, 2);
 
     // Prepare context
-    const context = topChunks.map((chunk) => chunk.content).join("\n").slice(0, 5000);
+    const context = topChunks.map((chunk) => chunk.content).join("\n");
 
     messages.push({
       role: "user",
       content: `Context: ${context}`,
     });
 
-    // Generate text with proper await
-    const res = await generateText({
-      model: google("gemini-1.5-pro"),
-      messages,
-    });
-    console.log(res.text);
+   
 
     // Stream response properly
     const result = await streamText({
