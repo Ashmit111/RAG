@@ -6,7 +6,7 @@ This project is a **PDF-based AI Chatbot** that retrieves responses from a knowl
 
 ## 🔥 Key Features
 
-- 📄 **PDF Parsing & Extraction** – Uses **LlamaParser** to extract text, tables, and structured data.
+- 📄 **PDF Parsing & Extraction** – Uses **PDFParser** to extract text, tables, and structured data.
 - 🧠 **Semantic Search with Cosine Similarity** – Ensures **highly relevant** responses.
 - 📌 **Citation & Reference Linking** – Shows exact PDF sections for answers.
 - ⚡ **Fast Query Processing** – Retrieves responses in **under 3 seconds**.
@@ -39,7 +39,7 @@ This project is a **PDF-based AI Chatbot** that retrieves responses from a knowl
 ## 🎯 Usage
 
 1. Ask a question related to the document.
-2. Get AI will responses with references to the exact section in the PDF.
+2. AI will responses with references to the exact section in the PDF.
 
 ## 🖼 Screenshots&#x20;
 This was the actual tabular data in the Governments circulars :
