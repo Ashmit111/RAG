@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# RAG-Powered PDF Chatbot
 
-## Getting Started
+## 🚀 Overview
 
-First, run the development server:
+This project is a **PDF-based AI Chatbot** that retrieves responses from a knowledge base of PDFs using **Retrieval-Augmented Generation (RAG)**. It efficiently extracts relevant text, handles structured data (tables, references), and provides accurate responses with citations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔥 Key Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 📄 **PDF Parsing & Extraction** – Uses **LlamaParser** to extract text, tables, and structured data.
+- 🧠 **Semantic Search with Cosine Similarity** – Ensures **highly relevant** responses.
+- 📌 **Citation & Reference Linking** – Shows exact PDF sections for answers.
+- ⚡ **Fast Query Processing** – Retrieves responses in **under 3 seconds**.
+- 🌍 **Scalability** – Handles **large PDFs** efficiently with MongoDB.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛠 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend:** Next.js, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB (for storing vectorized text)
+- **AI Processing:** LlamaParser, Cosine Similarity
+- **Deployment:** Docker, Vercel
 
-## Learn More
+## 📥 Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/RAG-PDF-Chatbot.git
+   cd RAG-PDF-Chatbot
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎯 Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Ask a question related to the document.
+2. Get AI will responses with references to the exact section in the PDF.
 
-## Deploy on Vercel
+## 🖼 Screenshots&#x20;
+This was the actual tabular data in the Governments circulars :
+![WhatsApp Image 2025-02-25 at 16 34 06_0179b5fa](https://github.com/user-attachments/assets/aebcb7f3-75b3-4561-b37c-81d192975e48)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Response from Our RAG bot :
+![WhatsApp Image 2025-02-25 at 16 42 23_9d3c9a6c](https://github.com/user-attachments/assets/6b04299f-dc81-4c12-b9f8-43bfb9bbf4e3)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔮 Future Enhancements
+
+- 🤖 **LLM Integration** for improved contextual understanding.
+- 📑 **Multi-PDF Search** to cross-reference multiple documents.
+- 🌎 **Multilingual Support** for wider accessibility.
+
+
+
+## 📜 License
+
+MIT License
+
+---
+
+📌 **Made with ❤️ by [Hackers]**
+
