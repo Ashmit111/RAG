@@ -10,7 +10,7 @@ import {
   useAuth 
 } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
-// import SplashCursor from "../components/sp";
+import SplashCursor from "../components/sp";
 
 const HeroSection = () => {
   const [showSignIn, setShowSignIn] = useState(false);
@@ -26,7 +26,7 @@ const HeroSection = () => {
 
   return (
     <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center px-4 text-center relative font-mono">
-      {/* <SplashCursor />/ */}
+      <SplashCursor />
       <nav className="absolute top-0 w-full flex justify-between items-center p-6 max-w-7xl mx-auto">
         <h1 className="text-lg font-semibold">ChatUr-Bot</h1>
         <div className="space-x-4">
